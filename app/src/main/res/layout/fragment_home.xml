@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar_home">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trang chủ"
+            style="@style/textStylelv3"
+            android:textStyle="bold"
+            android:id="@+id/tv_hometitle"/>
+    </androidx.appcompat.widget.Toolbar>
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintLeft_toLeftOf="@id/toolbar_home"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_home"
+        android:layout_marginLeft="@dimen/lv2"
+        android:src="@drawable/ic_add_box_black_24dp"
+        android:scaleType="fitXY"
+        android:background="@color/white"
+        android:id="@+id/ibtn_add"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm khuôn mặt"
+        app:layout_constraintStart_toEndOf="@id/ibtn_add"
+        app:layout_constraintTop_toTopOf="@id/ibtn_add"
+        app:layout_constraintBottom_toBottomOf="@id/ibtn_add"
+        android:layout_marginLeft="@dimen/lv2"
+        style="@style/textStylelv2"
+        android:textColor="@color/grey"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ibtn_add"
+        android:padding="@dimen/lv2"
+        android:id="@+id/rv_facedetection">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

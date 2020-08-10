@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "536114308164",
+    "firebase_url": "https://detecting-face-app-f8cf9.firebaseio.com",
+    "project_id": "detecting-face-app-f8cf9",
+    "storage_bucket": "detecting-face-app-f8cf9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536114308164:android:446e56fcb2816e299c8811",
+        "android_client_info": {
+          "package_name": "com.example.detectingfaceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536114308164-31ntksilqrt99imkaoqf85h7d93lbfsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8WlmN-AJRYSYeZsDoYj5tejqmx075yzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536114308164-31ntksilqrt99imkaoqf85h7d93lbfsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
