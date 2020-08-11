@@ -4,12 +4,20 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import java.util.List;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
+import io.realm.Sort;
 
 
 /**
@@ -29,7 +37,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private ImageButton ibtnAdd;
     private RecyclerView rvFaceDetection;
+    private FaceDetectionAdapter adapterFaceDetection;
     private View view;
+    private Realm realm;
+    private RealmResults<FaceDetectionObject> realmResults;
+    private List<FaceDetectionObject> listItem;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -68,6 +80,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_home, container, false);
         ConnectView();
+        LoadListFaceDetection();
         return view;
     }
 
@@ -76,6 +89,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         rvFaceDetection = (RecyclerView) view.findViewById(R.id.rv_facedetection);
 
         ibtnAdd.setOnClickListener(HomeFragment.this);
+
+        Realm.init(getActivity());
+        realm = Realm.getDefaultInstance();
+    }
+
+    private void LoadListFaceDetection() {
+        realmResults = realm.where(FaceDetectionObject.class).sort("name", Sort.ASCENDING).findAll();
+        listItem = realm.copyFromRealm(realmResults);
+        adapterFaceDetection = new FaceDetectionAdapter(listItem);
+        rvFaceDetection.setAdapter(adapterFaceDetection);
+        rvFaceDetection.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
     @Override

@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.camera:camera-lifecycle:1.0.0-beta07@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb697acb4da6dc42e4fae1cfa4b5de75/jetified-camera-lifecycle-1.0.0-beta07/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb697acb4da6dc42e4fae1cfa4b5de75/jetified-camera-lifecycle-1.0.0-beta07/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9eee3cb27d7eacf51f88c3f9ed1c3934/jetified-camera-lifecycle-1.0.0-beta07/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9eee3cb27d7eacf51f88c3f9ed1c3934/jetified-camera-lifecycle-1.0.0-beta07/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
