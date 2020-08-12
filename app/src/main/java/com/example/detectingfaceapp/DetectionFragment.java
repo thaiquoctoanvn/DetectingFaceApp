@@ -294,7 +294,12 @@ public class DetectionFragment extends Fragment implements View.OnClickListener 
             List<PointF> lowerLipBottomContour = face.getContour(FaceContour.LOWER_LIP_BOTTOM).getPoints();
             List<PointF> faceContour = face.getContour(FaceContour.FACE).getPoints();
 
-            Log.e("ppp", leftEyeContour.toString());
+            Log.e("left-eye", leftEyeContour.toString());
+            Log.e("right-eye", leftEyeContour.toString());
+            Log.e("nose", leftEyeContour.toString());
+            Log.e("upper-lip", leftEyeContour.toString());
+            Log.e("lower-lip", leftEyeContour.toString());
+            Log.e("face", leftEyeContour.toString());
 
             realm.executeTransaction(new Realm.Transaction() {
                 @Override
@@ -378,6 +383,7 @@ public class DetectionFragment extends Fragment implements View.OnClickListener 
             pointt.setX(p.x);
             Log.e("ppp", "Converting");
             pointt.setY(p.y);
+            realmList.add(pointt);
         }
 
         return realmList;
